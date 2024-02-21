@@ -1,0 +1,15 @@
+---
+const { url, name } = Astro.props
+const { pathname } = Astro.url
+---
+
+<li>
+  <a
+    href={url}
+    class={`block py-2 px-3 bg-blue-700 rounded md:bg-transparent md:p-0 ${
+      pathname === url ? 'md:text-blue-700' : 'md:text-gray-900'
+    }`}
+  >
+    {name}
+  </a>
+</li>

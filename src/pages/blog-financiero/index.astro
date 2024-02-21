@@ -1,0 +1,54 @@
+---
+import CardBlog from '../../components/common/CardBlog.astro'
+import SpanFeatured from '../../components/common/SpanFeatured.astro'
+import Layout from '../../layouts/Layout.astro'
+import { blogs } from '../../utils/blog.js'
+---
+
+<Layout title="Blog Financiero">
+  <main class="mt-20 w-full grid gap-2">
+    <section class="grid">
+      <h1
+        class="colorPrimary rounded-xl h-10 text-center text-2xl sm:text-3xl md:text-4xl md:h-14 md:pt-2 lg:text-4xl lg:h-28 lg:w-11/12 lg:pt-7"
+      >
+        Descubre Nuestro Blog Financiero
+      </h1>
+      <div class="w-10/12 mx-auto my-5">
+        <p class="mb-2">
+          En <SpanFeatured text="YAVO Capital" /> nuestro objetivo es{' '}
+          <strong>
+            impulsar el sector financiero, inmobiliario y de bienes raíces en
+            México
+          </strong>{' '}
+          pues creemos que tiene un increíble potencial de crecimiento; es por esto
+          que junto con nuestros{' '}
+
+          <a href="/productos-financieros" class="border-b-2 border-orange-300">
+            productos y soluciones financieras
+          </a>
+          , también te ofrecemos estos artículos y notas relevantes en nuestro blog
+          financiero, que te serán de ayuda para comprender más acerca de estos sectores
+          tan importantes en nuestro país.
+        </p>
+        <p>
+          <strong>Recuerda que contamos con la mejor asistencia</strong> y soluciones
+          especializadas en el mercado.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-5 grid md:grid w-10/12 mx-auto md:grid-cols-2">
+      {
+        blogs.map(({ title, description, img, url, name }) => (
+          <CardBlog
+            title={title}
+            description={description}
+            img={img}
+            url={url}
+            name={name}
+          />
+        ))
+      }
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Button from '../components/common/Button.astro'
+---
+
+<Layout title="Página no encontrada">
+  <main class="mt-20 w-full grid">
+    <section class="h-[500px] grid items-center">
+      <img
+        alt="logo yavo capital"
+        src="/images/logo.webp"
+        class="mx-auto h-[150px]"
+      />
+      <h1 class="text-5xl text-center font-light">
+        Error: Página no encontrada
+      </h1>
+      <Button text="Regresar a Home" url="/" />
+    </section>
+  </main>
+</Layout>

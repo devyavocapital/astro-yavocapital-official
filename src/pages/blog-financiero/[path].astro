@@ -1,0 +1,32 @@
+---
+import type { GetStaticPaths } from 'astro'
+import Layout from '../../layouts/Layout.astro'
+import { blogs } from '../../utils/blog'
+import { posts } from '../../utils/post'
+
+export const getStaticPaths = (() => {
+  return blogs.map(({ path, title }) => {
+    return {
+      params: { path },
+      props: { title, path },
+    }
+  })
+}) satisfies GetStaticPaths
+
+const { title, path } = Astro.props
+---
+
+<Layout title={title}>
+  <main class="mt-28 w-full grid gap-2 mb-10 mx-auto">
+    {
+      posts.map(
+        ({ url, id, content, name }) =>
+          url === path && (
+            <div class="mx-auto">
+              <div set:html={content} />
+            </div>
+          )
+      )
+    }
+  </main>
+</Layout>

@@ -1,0 +1,54 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import ModuleMain from '../../../components/module/ModuleMain.astro'
+import Carousel from '../../../components/common/Carousel.astro'
+import Button from '../../../components/common/Button.astro'
+import { infoCredit } from '../../../utils/infoCredit.js'
+
+const titleClasses = 'text-lg my-2 colorPrimary lg:text-3xl lg:my-4'
+---
+
+<Layout title="Crédito Integral Línea III">
+  <main class="mt-20 w-full grid gap-2">
+    <ModuleMain
+      backgroundImage="bg-[url('/images/bg-credit.webp')]"
+      title="¿Qué es Crédito integral linea III?"
+      info="Es uno de nuestros productos financieros en el cual el 100% del Crédito de INFONAVIT para el financiamiento de tu proyecto de desarrollo de vivienda o desarrollo habitacional es otorgado por dicha institución y los recursos son administrados por YAVO CAPITALentregando los recursos al Desarrollador mediante ministraciones de acuerdo al avance de obra, en un plazo máximo de construcción del proyecto de 6 meses."
+      button={false}
+    />
+    <section
+      class="grid mx-auto w-11/12 text-sm my-5 md:w-10/12 lg:text-lg xl:w-8/12"
+    >
+      <h1 class={`${titleClasses} text-center`}>
+        ¿En qué consiste el Crédito Integral Línea III de INFONAVIT?
+      </h1>
+      <video controls class="grid mx-auto rounded-2xl my-5 w-full md:w-8/12">
+        <source src="/video/intro-yavocapital.mp4" type="video/mp4" />
+      </video>
+
+      <div>
+        <p>
+          A continuación te explicamos todo lo relacionado al{' '}
+          <strong>Crédito Integral de Línea III de INFONAVIT</strong>, para que
+          vuelvas una realidad tu proyecto de desarrollo de vivienda o
+          desarrollo habitacional:
+        </p>
+
+        {
+          infoCredit.map(({ title, info }) => (
+            <>
+              <p class={titleClasses}>{title}</p>
+              {info.map((i) => (
+                <p set:html={i} />
+              ))}
+            </>
+          ))
+        }
+      </div>
+    </section>
+
+    <Carousel />
+
+    <Button text="Contáctanos para solicitar tu crédito" url="/contacto" />
+  </main>
+</Layout>

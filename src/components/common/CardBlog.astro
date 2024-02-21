@@ -1,0 +1,33 @@
+---
+interface Props {
+  url: string
+  img: string
+  name: string
+  title: string
+  description: string
+}
+const { url, img, name, title, description } = Astro.props
+---
+
+<figure
+  class="relative transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 mb-5 md:mr-2 md:col-span-1"
+>
+  <a href={`/blog-financiero/${url}`}>
+    <img
+      class="rounded-lg object-cover h-[350px] w-full"
+      src={img}
+      alt={name}
+    />
+
+    <figcaption class="absolute px-4 text-lg text-white bottom-6">
+      <div class="backgroundPrimary rounded-t-xl p-2">
+        <h3 class="text-xl lg:text-2xl">{title}</h3>
+      </div>
+      <div class="bg-white rounded-b-xl">
+        <p class="text-sm italic lg:text-md text-black p-2">
+          {description}
+        </p>
+      </div>
+    </figcaption>
+  </a>
+</figure>

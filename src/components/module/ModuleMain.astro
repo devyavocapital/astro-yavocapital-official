@@ -1,0 +1,35 @@
+---
+import Button from '../common/Button.astro'
+
+interface Props {
+  backgroundImage: string
+  title?: string
+  info?: string
+  button: boolean
+  buttonText?: string
+  buttonUrl?: string
+}
+
+const { backgroundImage, title, info, button, buttonText, buttonUrl } =
+  Astro.props
+---
+
+<section
+  class={`${backgroundImage} bg-center bg-no-repeat bg-gray-600 bg-blend-multiply flex flex-col items-center justify-center border border-gray-200 rounded-lg shadow md:flex-row w-full md:w-9/12 relative mx-auto`}
+>
+  <div class="px-4 mx-auto text-center py-24 lg:py-44">
+    <h1
+      class="mb-10 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl"
+    >
+      {title}
+    </h1>
+
+    <p
+      class="mb-10 text-lg font-normal text-gray-300 lg:text-2xl sm:px-16 lg:px-48"
+    >
+      {info}
+    </p>
+
+    {button && <Button text={buttonText} url={buttonUrl} />}
+  </div>
+</section>

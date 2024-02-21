@@ -1,0 +1,67 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import ModuleMain from '../../../components/module/ModuleMain.astro'
+import SpanFeatured from '../../../components/common/SpanFeatured.astro'
+import Button from '../../../components/common/Button.astro'
+---
+
+<Layout title="Fideicomiso De Garantía">
+  <main class="mt-20 w-full grid gap-2">
+    <ModuleMain
+      backgroundImage="bg-[url('/images/bg-credit.webp')]"
+      title="¿Qué es un Fideicomiso De Garantía?"
+      info="En palabras sencillas podemos decir que un fideicomiso es un contrato en virtud a través del cual se transmite un bien, dinero o derechos, presentes o futuros, de su propiedad a otra persona, para que esta administre o invierta los bienes en beneficio propio o en beneficio de un tercero."
+      button={false}
+    />
+
+    <div class="grid w-9/12 md:7/12 mx-auto my-5">
+      <div>
+        <h3 class="text-xl md:text-4xl my-4">
+          <SpanFeatured text="¿En qué consiste un Fideicomiso de Garantía?" />
+        </h3>
+        <p class="text-lg">
+          Es el fideicomiso en el cual{' '}
+          <SpanFeatured
+            text="el fideicomitente transmite la propiedad de bienes al fiduciario para garantizar con los mismos el cumplimiento de una obligación"
+          />
+          , ya sea propia o de un tercero, previendo que para el caso de incumplimiento
+          el fiduciario proceda al remate en pública subasta de los mismos, ya sea
+          bajo el procedimiento convencional que se pacte en el contrato, o bien
+          bajo el procedimiento previsto en la ley, entregando el producto del remate
+          al fideicomisario-acreedor en pago de la obligación.
+        </p>
+      </div>
+      <div class="grid">
+        <h3 class="text-xl md:text-4xl my-4">
+          <SpanFeatured
+            text="¿Cuáles son las ventajas de un Fideicomiso de Garantía"
+          />
+        </h3>
+        <ol class="pl-5 mt-2 mb-5 space-y-1 list-decimal list-inside text-lg">
+          <li>Armonización de intereses de las partes involucradas</li>
+          <li>Confianza entre los socios del negocio y hacia terceros</li>
+          <li>Imparcialidad del fiduciario</li>
+          <li>Administración y asesoría profesional</li>
+          <li>Eficacia en control operativo del negocio</li>
+          <li>Respaldo de una infraestructura institucional</li>
+          <li>Confidencialidad (secreto fiduciario)</li>
+          <li>Transparencia del negocio entre las partes y hacia terceros</li>
+          <li>Seguridad jurídica</li>
+        </ol>
+        <p class="text-lg mb-5">
+          El fideicomiso de garantía que ofrecemos como servicios especializado{
+            ' '
+          }
+          <strong>
+            asesora al desarrollador desde el mapeo de la necesidad del
+            aportante de la tierra hasta la implementación del Fideicomiso de
+            Garantía
+          </strong>
+          ; brindando a ambas partes certeza legal y financiera del Proyecto.
+        </p>
+
+        <Button text={'Contáctanos para más información'} url="/contacto" />
+      </div>
+    </div>
+  </main>
+</Layout>

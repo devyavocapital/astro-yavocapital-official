@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import ModuleMain from '../../components/module/ModuleMain.astro'
+import SpanFeatured from '../../components/common/SpanFeatured.astro'
+import Button from '../../components/common/Button.astro'
+---
+
+<Layout title="MejoraSí">
+  <main class="mt-20 w-full grid gap-2">
+    <section
+      class="rounded-lg shadow md:flex-row w-full md:w-9/12 relative mx-auto h-[600px]"
+    >
+      <div class="opacity-100 relative">
+        <img
+          alt="logo infonavit"
+          src="/images/bg-mejorasi.jpg"
+          class="object-cover w-full h-[600px] opacity-40"
+        />
+      </div>
+      <div
+        class="absolute opacity-100 top-[20%] left-0 flex justify-between items-center"
+      >
+        <img
+          alt="logo infonavit"
+          src="/images/infonavit.png"
+          class="w-full h-full"
+        />
+        <img
+          alt="logo infonavit"
+          src="/images/mejorasi2.png"
+          class="w-full h-full ml-10"
+        />
+      </div>
+    </section>
+
+    <article class="w-9/12 mx-auto gap-4 grid">
+      <h1 class="text-5xl text-center text-pretty">
+        Conoce el crédito mejOraSí, en el que participa Yavo Capital como
+        proveedor de servicios para el Infonavit.
+      </h1>
+      <p class="text-2xl text-pretty">
+        Es un Crédito para derechohabientes que dejaron de cotizar al Infonavit,
+        pero que tienen ahorros en su Subcuenta de Vivienda. Podrás reparar,
+        mejorar o ampliar tu casa, sin que se modifiques la estructura.
+      </p>
+
+      <p class="text-2xl text-pretty">
+        Una vez autorizado tu crédito, se te entregará una tarjeta, con la cual
+        podrás adquirir los materiales que necesites en establecimientos
+        autorizados por el Infonavit, y también podrás usar hasta el 50% del
+        importe que se te otorgue de crédito en efectivo, para gastos de mano de
+        obra.
+      </p>
+
+      <p class="text-2xl text-pretty">
+        También podrás descargar tu aplicación Yavo Mejora en la cual podrás
+        activar tu tarjeta, conocer tu saldo disponible, consultar tus compras y
+        retiros en cajeros automáticos y autorizar tus compras de una forma más
+        fácil y segura. Esta aplicación se encuentra disponible para
+        dispositivos Android y IOS.
+      </p>
+
+      <p class="text-2xl text-pretty">
+        <a
+          href="https://portalmx.infonavit.org.mx/wps/portal/infonavitmx/mx2/derechohabientes/quiero_credito/quiero_remodelar/comercios/"
+          target="_blank"
+          class="underline">Consulta los comercios afiliados al programa</a
+        > y <a
+          href="https://portalmx.infonavit.org.mx/wps/wcm/connect/432aa55c-9d38-4aa4-8e13-2e39c0d2d3f9/Carta_uso_tarjeta_mejOraSi.pdf?MOD=AJPERES&ContentCache=NONE&CACHE=NONE&CVID=osa-GeH"
+          target="_blank"
+          class="underline">las condiciones de uso de tu tarjeta.</a
+        >
+      </p>
+
+      <p class="text-2xl text-pretty">
+        Conoce los requisitos del Programa mejOraSí en:
+      </p>
+
+      <a
+        href="https://portalmx.infonavit.org.mx/wps/portal/infonavitmx/mx2/derechohabientes/quiero_credito/quiero_remodelar"
+        target="_blank"
+        class="text-2xl text-pretty underline"
+        >https://portalmx.infonavit.org.mx/wps/portal/infonavitmx/mx2/derechohabientes/quiero_credito/quiero_remodelar</a
+      >
+
+      <p class="text-2xl text-pretty">
+        Para Derechohabientes que ya cuentan con su tarjeta y desean realizar su
+        activación, consulta de saldo o reporte por robo o extravío pueden
+        marcar al Call Center al teléfono: 5590585240
+      </p>
+    </article>
+  </main>
+</Layout>

@@ -1,0 +1,81 @@
+---
+import ModuleOptions from '../../components/module/ModuleOptions.astro'
+import ModuleMain from '../../components/module/ModuleMain.astro'
+import Layout from '../../layouts/Layout.astro'
+import SpanFeatured from '../../components/common/SpanFeatured.astro'
+---
+
+<Layout title="Quienes Somos">
+  <main class="mt-20 w-full grid gap-2">
+    <ModuleMain
+      backgroundImage="bg-[url('/images/backgroundUs.webp')]"
+      title="'¿Quiénes Somos? Un Vehículo Financiero.'"
+      info="'Somos un vehículo financiero enfocado a contribuir en el sector bienes raíces y mejorar la calidad del segmento vivienda, a través de ofrecer productos financieros innovadores y crear alianzas estratégicas con desarrolladores, Inversionistas, Entidades Gubernamentales, etc. Nuestro objetivo es ser un vínculo proactivo en cada etapa del crédito para poder garantizar el éxito de tus proyectos.'"
+      button={true}
+      buttonText="Conoce nuestros productos financieros"
+      buttonUrl="/productos-financieros"
+    />
+
+    <ModuleOptions />
+
+    <div
+      class="grid md:flex md:flex-row-reverse mb-5 md:justify-center md:justify-self-center md:w-9/12"
+    >
+      <div class="w-full">
+        <img
+          alt="backgound description"
+          src="/images/bg-financial.webp"
+          class="w-full md:h-[100%] md:w-full md:object-cover"
+        />
+      </div>
+
+      <div class="flex flex-col">
+        <div class="md:w-full md:mb-4">
+          <h2
+            class="font-bold text-[36px] text-center md:text-left md:text-7xl"
+          >
+            Promovemos el{' '}
+            <SpanFeatured text="desarrollo inmobiliario" />
+            en México
+          </h2>
+        </div>
+
+        <div class="md:flex md:flex-row description xl:text-xl">
+          <div class="md:w-11/12 md:px-3">
+            <p class="mb-5">
+              Podemos definir al desarrollo inmobiliario como la gestión y
+              coordinación de distintos agentes y actividades involucradas para
+              la creación de un inmueble, con el objetivo de satisfacer una
+              necesidad de vivienda (o patrimonio) para compradores e
+              inversionistas.
+            </p>
+            <p class="mb-5">
+              Dicha actividad es altamente compleja y por lo tanto necesita de
+              un equipo y asesoría altamente especializado.
+            </p>
+            <p class="mb-5">
+              Es debido a la complejidad de las{' '}
+              <strong>etapas de un desarrollo inmobiliario</strong> y porque creemos
+              que México posee un potencial increíble en el sector de bienes raíces,
+              que ofrecemos nuestra ayuda y asesoría en uno de los pasos más importantes:
+              el financiamiento de tu proyecto inmobiliario.
+            </p>
+          </div>
+          <div class="md:w-11/12 md:px-3">
+            <p class="mb-5">
+              Nuestros <SpanFeatured text="productos financieros" />{' '}
+              están enfocados en evaluar la viabilidad del proyecto y conducir al
+              desarrollador hacia la obtención del capital necesario para volver
+              una realidad dicho proyecto.
+            </p>
+            <p class="mb-5">
+              Acércate a nosotros y descubre por qué somos la Capital Financiera
+              No.1 en Bienes Raíces; somos{' '}
+              <SpanFeatured text="YAVO CAPITAL." />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

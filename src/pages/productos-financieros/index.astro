@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import ModuleProduct from '../../components/module/ModuleProduct.astro'
+import { infoProducts } from '../../utils/infoProducts.js'
+---
+
+<Layout title="Productos Financieros">
+  <main class="mt-[100px] w-full">
+    {
+      infoProducts.map(({ img, classesImg, classesInfo, name, info }) => (
+        <ModuleProduct
+          img={img}
+          classesImg={classesImg}
+          classesInfo={classesInfo}
+          name={name}
+          info={info}
+        />
+      ))
+    }
+
+    <section class="flex justify-between w-full mx-auto">
+      <div class="w-full h-[500px] relative text-white hover:text-[#f9a400]">
+        <div
+          class="bg-[url('/images/card-home-1.webp')] bg-center h-full bg-cover opacity-70 bg-slate-300 bg-blend-multiply rounded"
+        >
+        </div>
+        <a
+          href="/productos-financieros/credito-integral-linea-3"
+          class="font-bold absolute bottom-0 left-0 text-7xl w-8/12 text-pretty p-3"
+        >
+          Crédito Integral Línea III INFONAVIT
+        </a>
+      </div>
+      <div class="w-full h-[500px] relative text-white hover:text-[#f9a400]">
+        <div
+          class="bg-[url('/images/card-home-2.webp')] bg-center bg-no-repeat bg-cover h-full opacity-70 bg-slate-300 bg-blend-multiply rounded"
+        >
+        </div>
+        <a
+          href="/productos-financieros/fideicomiso-de-garantia"
+          class="font-bold absolute bottom-0 right-0 p-3 text-7xl w-8/12 text-pretty text-right"
+        >
+          Fideicomisos de Garantía
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,17 @@
+---
+const { img, classesImg, classesInfo, name, info } = Astro.props
+---
+
+<section>
+  <div class="relative w-10/12 mx-auto max-h-[900px]">
+    <div class="relative">
+      <img alt={name} src={`/images/${img}`} class={`${classesImg}`} />
+      <div class={classesInfo}>
+        <p
+          class="mx-2 my-auto md:text-lg lg:text-2xl xl:text-4xl"
+          set:html={info}
+        />
+      </div>
+    </div>
+  </div>
+</section>

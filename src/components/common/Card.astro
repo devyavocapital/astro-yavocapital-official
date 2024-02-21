@@ -1,0 +1,26 @@
+---
+const { title, description, image, url, classes } = Astro.props
+---
+
+<div class={`w-full h-[400px] mx-auto rounded-lg shadow ${classes} relative`}>
+  <a href={url}>
+    <img
+      class="rounded-lg h-full object-cover w-full background transition-scale duration-1000 ease-in-out group-hover:scale-110"
+      src={`/images/${image}`}
+      alt="product image"
+    />
+  </a>
+  <div class="px-5 pb-5 mt-2 bg-opacity-0 absolute top-0 left-0 w-full">
+    <a
+      href="#"
+      class="bg-orange-700 text-xl md:text-2xl font-semibold tracking-tight text-white text-center mb-2 w-8/12 px-5 py-2 rounded-r-lg absolute top-0 left-0"
+    >
+      {title}
+    </a>
+    <div class="grid items-center justify-between">
+      <p class="mb-6">
+        {description}
+      </p>
+    </div>
+  </div>
+</div>
